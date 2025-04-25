@@ -1,0 +1,25 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Health Info{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Health Information System</h1>
+        <nav>
+            <a href="{{ url_for('main.index') }}">Home</a> |
+            <a href="{{ url_for('main.create_program') }}">Create Program</a> |
+            <a href="{{ url_for('main.register_client') }}">Register Client</a> |
+            <a href="{{ url_for('main.enroll_client') }}">Enroll</a> |
+            <a href="{{ url_for('main.search_client') }}">Search</a>
+        </nav>
+        <hr>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

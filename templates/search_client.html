@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Search Clients{% endblock %}
+{% block content %}
+    <h2>Search for Clients</h2>
+    <form method="GET">
+        <input type="text" name="q" placeholder="Enter client name..." value="{{ query }}">
+        <button type="submit">Search</button>
+    </form>
+
+    {% if clients %}
+        <ul>
+        {% for client in clients %}
+            <li><a href="{{ url_for('main.client_profile', client_id=client.id) }}">{{ client.name }}</a></li>
+        {% endfor %}
+        </ul>
+    {% elif query %}
+        <p>No clients found for "{{ query }}".</p>
+    {% endif %}
+{% endblock %}

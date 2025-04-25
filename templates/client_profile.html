@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Client Profile{% endblock %}
+{% block content %}
+<h2>{{ client.name }}'s Profile</h2>
+<p>Age: {{ client.age }}</p>
+<p>Gender: {{ client.gender }}</p>
+<p>Programs:</p>
+<ul>
+    {% for program in client.programs %}
+    <li>{{ program.name }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

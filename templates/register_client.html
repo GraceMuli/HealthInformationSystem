@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Register Client{% endblock %}
+{% block content %}
+    <h2>Register a New Client</h2>
+    <form method="POST">
+        <label>Name:</label><br>
+        <input type="text" name="name" required><br>
+        <label>Age:</label><br>
+        <input type="number" name="age" required><br>
+        <label>Gender:</label><br>
+        <input type="text" name="gender" required><br>
+        <button type="submit">Register</button>
+    </form>
+{% endblock %}
