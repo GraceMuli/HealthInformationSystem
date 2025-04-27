@@ -51,12 +51,19 @@ def enroll_client():
 
     return render_template('enroll_client.html', clients=clients, programs=programs)
 
-@main.route('/search-client', methods=['GET'])
+@main.route('/search-client', methods=['GET', 'POST'])
 def search_client():
-    query = request.args.get('q')
-    clients = Client.query.filter(Client.name.contains(query)).all() if query else []
-    return render_template('search_client.html', clients=clients, query=query)
+    if request.method == 'POST':
+        query = request.form.get('q')
+        if query:
+            clients = Client.query.filter(Client.name.ilike(f"%{query}%")).all()
+        else:
+            clients = Client.query.all()
+    else:
+        clients = Client.query.all()
 
+    return render_template('search_client.html', clients=clients)
+    
 @main.route('/client/<int:client_id>')
 def client_profile(client_id):
     client = Client.query.get_or_404(client_id)
