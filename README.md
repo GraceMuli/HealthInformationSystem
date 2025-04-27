@@ -12,7 +12,25 @@ It allows a doctor (user) to manage clients and health programs easily through a
 - **Expose** client profiles via a **RESTful API** for external systems
 
 ## 📷 Screenshots
-*(Add screenshots here if you want!)*
+
+### Home Page
+![Home Page](images/homepage.png)
+
+### Create Program
+![Create Program](images/create_program.png)
+
+### Register Client Page
+![Register Client](images/register_client.png)
+
+### Enroll Client Page
+![Enroll Client](images/enroll_client.png)
+
+### Client Profile Page
+![Client Profile](images/profile.png)
+
+### Search Clients Page
+![Search Clients](images/search.png)
+
 
 ## 🚀 Technologies Used
 - **Python 3**
