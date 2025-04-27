@@ -88,7 +88,7 @@ Here is the link to the [Health Information System](https://his-qxah.onrender.co
 
 ## 📄 Demo Presentation
 
-Click here to view the [presentation](presentation.pptx)
+Click here to view the [presentation](Powerpoint_presentation.pdf)
 
 ## 👩‍💻 Author
 - Grace Muli
