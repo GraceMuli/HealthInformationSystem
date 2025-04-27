@@ -92,3 +92,35 @@ h2 {
 .btn:hover {
     background: #45a049;
 }
+
+.clients-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.clients-table th, .clients-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.clients-table th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.clients-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.search-form {
+    margin-bottom: 20px;
+}
+.search-form input[type="text"] {
+    padding: 8px;
+    width: 300px;
+}
+.search-form button {
+    padding: 8px 12px;
+}
