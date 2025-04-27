@@ -3,23 +3,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Health Info{% endblock %}</title>
+    <title>HIS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <header>
-        <h1>Health Information System</h1>
-        <nav>
-            <a href="{{ url_for('main.index') }}">Home</a> |
-            <a href="{{ url_for('main.create_program') }}">Create Program</a> |
-            <a href="{{ url_for('main.register_client') }}">Register Client</a> |
-            <a href="{{ url_for('main.enroll_client') }}">Enroll</a> |
-            <a href="{{ url_for('main.search_client') }}">Search</a>
-        </nav>
-        <hr>
-    </header>
-    <main>
-        {% block content %}{% endblock %}
-    </main>
+    <div class="sidebar">
+        <h2>HIS</h2>
+        <ul>
+            <li><a href="{{ url_for('main.index') }}">Home</a></li>
+            <li><a href="{{ url_for('main.create_program') }}">Create Program</a></li>
+            <li><a href="{{ url_for('main.register_client') }}">Register Client</a></li>
+            <li><a href="{{ url_for('main.enroll_client') }}">Enroll</a></li>
+            <li><a href="{{ url_for('main.search_client') }}">Search</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        {% block content %}
+        {% endblock %}
+    </div>
 </body>
 </html>
