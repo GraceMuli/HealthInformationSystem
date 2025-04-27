@@ -22,18 +22,16 @@ def create_program():
 
 @main.route('/register-client', methods=['GET', 'POST'])
 def register_client():
-    form = ClientForm()
-    if form.validate_on_submit():
-        # Process form data
-        if request.method == 'POST':
-            name = format_name(request.form['name'])  # Apply formatting
-            age = request.form['age']
-            gender = request.form['gender']
-            client = Client(name=name, age=age, gender=gender)
-            db.session.add(client)
-            db.session.commit()
+    if request.method == 'POST':
+        name = request.form['name']
+        age = request.form['age']
+        gender = request.form['gender']
+
+        client = Client(name=name, age=age, gender=gender)
+        db.session.add(client)
+        db.session.commit()
         return redirect(url_for('main.index'))
-    return render_template('register_client.html', form=form)
+    return render_template('register_client.html')
 
 @main.route('/enroll-client', methods=['GET', 'POST'])
 def enroll_client():
