@@ -37,7 +37,7 @@ It allows a doctor (user) to manage clients and health programs easily through a
 - **Flask**
 - **SQLite3** (Database)
 - **HTML5**, **CSS3** (Frontend)
-- **Flask-WTF** (for future form handling)
+- **Flask-WTF** (for form handling)
 
 ## 🛠️ Setup Instructions
 
