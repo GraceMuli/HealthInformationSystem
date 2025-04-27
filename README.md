@@ -58,10 +58,10 @@ It allows a doctor (user) to manage clients and health programs easily through a
    pip install -r requirements.txt
    ```
 
-4. Run the application:
+4. Set environment variables and run the app:
    ```bash
-   python run.py
-   or
+   set FLASK_APP=run.py
+   set FLASK_ENV=development
    flask run
    ```
 
@@ -82,6 +82,10 @@ It allows a doctor (user) to manage clients and health programs easily through a
     "programs": ["Malaria"]
   }
   ```
+## 🌐 Live Deployment
+
+Here is the link to the [Health Information System](https://his-qxah.onrender.com) website
+
 ## 📄 Demo Presentation
 
 Click here to view the [presentation](presentation.pptx)
