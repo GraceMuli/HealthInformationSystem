@@ -41,9 +41,9 @@ def enroll_client():
     if request.method == 'POST':
         client_id = int(request.form['client'])
         selected_programs = request.form.getlist('programs')
-        client = Client.query.get(client_id)
+        client = db.session.get(Client, client_id)
         for pid in selected_programs:
-            program = Program.query.get(int(pid))
+            program = db.session.get(Program, int(pid))
             if program not in client.programs:
                 client.programs.append(program)
         db.session.commit()
@@ -66,12 +66,16 @@ def search_client():
     
 @main.route('/client/<int:client_id>')
 def client_profile(client_id):
-    client = Client.query.get_or_404(client_id)
-    return render_template('client_profile.html', client=client)
+    client = db.session.get(Client, client_id)
+    if client is None:
+        abort(404)
+        return render_templates('client_profile.html', client=client)
 
 @main.route('/api/client/<int:client_id>')
 def api_client_profile(client_id):
-    client = Client.query.get_or_404(client_id)
+    client = db.session.get(Client, client_id)
+    if client is None:
+        abort(404)
     return jsonify({
         'id': client.id,
         'name': client.name,
