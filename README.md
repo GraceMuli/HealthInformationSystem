@@ -82,6 +82,9 @@ It allows a doctor (user) to manage clients and health programs easily through a
     "programs": ["Malaria"]
   }
   ```
+## 📄 Demo Presentation
+
+Click here to view the [presentation](presentation.pptx)
 
 ## 👩‍💻 Author
 - Grace Muli
