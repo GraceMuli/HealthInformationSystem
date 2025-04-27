@@ -87,4 +87,4 @@ It allows a doctor (user) to manage clients and health programs easily through a
 - Grace Muli
 
 ## 📜 License
-This project is licensed under the MIT License.
+This project is licensed under the ![MIT License](MIT License).
