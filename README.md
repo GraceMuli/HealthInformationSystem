@@ -51,8 +51,6 @@ It allows a doctor (user) to manage clients and health programs easily through a
    ```bash
    python -m venv venv
    venv\Scripts\activate    # On Windows
-   # or
-   source venv/bin/activate # On Mac/Linux
    ```
 
 3. Install dependencies:
@@ -63,11 +61,8 @@ It allows a doctor (user) to manage clients and health programs easily through a
 4. Run the application:
    ```bash
    python run.py
-   ```
-
-5. Open your browser and go to:
-   ```
-   http://127.0.0.1:5000/
+   or
+   flask run
    ```
 
 ## 📑 API Endpoints
@@ -81,24 +76,12 @@ It allows a doctor (user) to manage clients and health programs easily through a
   ```json
   {
     "id": 1,
-    "name": "Grace Muli",
-    "age": 29,
+    "name": "Grace",
+    "age": 18,
     "gender": "Female",
-    "programs": ["HIV Program", "Malaria Program"]
+    "programs": ["Malaria"]
   }
   ```
-
-## 🛡️ Security Notes
-- Data validation and form handling ready (Flask-WTF ready for integration).
-- API endpoint exposes **only necessary client data**.
-- Project structure supports future authentication and user roles.
-
-## 📈 Future Improvements
-- Add **login system** for doctors
-- Add **edit/delete client** functionalities
-- Implement **pagination** for large client lists
-- Host the project live (Render, Railway, Vercel)
-- Enhance API with **token-based authentication**
 
 ## 👩‍💻 Author
 - Grace Muli
