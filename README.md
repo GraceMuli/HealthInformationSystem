@@ -102,7 +102,7 @@ All the tests passed successfully:
 
 This application is live on Render.
 
--  [Health Information System](https://his-qxah.onrender.com/)
+-  [Health Information System](https://his-qxah.onrender.com)
 
 
 ## 📄 Demo Presentation
