@@ -26,6 +26,10 @@
             <td>{{ client.gender }}</td>
             <td><a href="{{ url_for('main.client_profile', client_id=client.id) }}">View</a></td>
         </tr>
+        {% else %}
+        <tr>
+            <td colspan="4">No clients found</td>
+        </tr>
         {% endfor %}
     </tbody>
 </table>
