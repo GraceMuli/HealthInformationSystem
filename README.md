@@ -1,7 +1,7 @@
 # 🏥 Health Information System
 
 This project is a **basic Health Information System** built using **Flask**, **SQLite**, and **HTML/CSS**.  
-It allows a doctor (user) to manage clients and health programs easily through a web interface.
+It allows a doctor (user) to easily manage clients and health programs through a web interface.
 
 ## ✨ Features
 - Create new health **programs** (e.g., TB, Malaria, HIV, etc.)
@@ -10,6 +10,7 @@ It allows a doctor (user) to manage clients and health programs easily through a
 - **Search** for clients and view a full list
 - **View** a client’s detailed profile and enrolled programs
 - **Expose** client profiles via a **RESTful API** for external systems
+- **Unit-tested**: 14 tests verifying functionality.
 
 ## 📷 Screenshots
 
@@ -38,6 +39,7 @@ It allows a doctor (user) to manage clients and health programs easily through a
 - **SQLite3** (Database)
 - **HTML5**, **CSS3** (Frontend)
 - **Flask-WTF** (for form handling)
+- Python **unittest** 
 
 ## 🛠️ Setup Instructions
 
@@ -58,12 +60,13 @@ It allows a doctor (user) to manage clients and health programs easily through a
    pip install -r requirements.txt
    ```
 
-4. Set environment variables and run the app:
+4. Set environment variables and run the flask app:
    ```bash
    set FLASK_APP=run.py
    set FLASK_ENV=development
    flask run
    ```
+5. Access the application in your browser.
 
 ## 📑 API Endpoints
 
@@ -82,9 +85,25 @@ It allows a doctor (user) to manage clients and health programs easily through a
     "programs": ["Malaria"]
   }
   ```
+
+## ✅ Running Tests
+
+This project uses Python's built-in unittest framework.
+
+To run all tests:
+```bash
+python -m unittest discover -s tests
+```
+![All tests passed successfully:](images/tests.png)
+
 ## 🌐 Live Deployment
 
-Here is the link to the [Health Information System](https://his-qxah.onrender.com) website
+This application is live on Render.
+
+-  [Health Information System](https://health-info-system.onrender.com)
+
+The app uses production settings suitable for cloud deployment.
+
 
 ## 📄 Demo Presentation
 
