@@ -94,20 +94,20 @@ To run all tests:
 ```bash
 python -m unittest discover -s tests
 ```
+All the tests passed successfully:
+
 ![All tests passed successfully:](images/tests.png)
 
 ## 🌐 Live Deployment
 
 This application is live on Render.
 
--  [Health Information System](https://health-info-system.onrender.com)
-
-The app uses production settings suitable for cloud deployment.
+-  [Health Information System](https://his-qxah.onrender.com/)
 
 
 ## 📄 Demo Presentation
 
-Click here to view the [presentation](Powerpoint_presentation.pdf)
+Click here to view the powerpoint [presentation](Powerpoint_presentation.pdf)
 
 ## 👩‍💻 Author
 - Grace Muli
