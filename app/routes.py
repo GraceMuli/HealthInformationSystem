@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, redirect, url_for, jsonify
+from flask import Blueprint, render_template, request, redirect, url_for, jsonify, abort
 from . import db
 from .models import Client, Program
 from .utils import format_name
@@ -53,23 +53,19 @@ def enroll_client():
 
 @main.route('/search-client', methods=['GET', 'POST'])
 def search_client():
-    if request.method == 'POST':
-        query = request.form.get('q')
-        if query:
-            clients = Client.query.filter(Client.name.ilike(f"%{query}%")).all()
-        else:
-            clients = Client.query.all()
+    query = request.args.get('q') or request.form.get('q')
+    if query:
+        clients = Client.query.filter(Client.name.ilike(f"%{query}%")).all()
     else:
         clients = Client.query.all()
-
     return render_template('search_client.html', clients=clients)
-    
+
 @main.route('/client/<int:client_id>')
 def client_profile(client_id):
     client = db.session.get(Client, client_id)
     if client is None:
         abort(404)
-        return render_templates('client_profile.html', client=client)
+    return render_template('client_profile.html', client=client)
 
 @main.route('/api/client/<int:client_id>')
 def api_client_profile(client_id):
